@@ -1,4 +1,4 @@
-Keskustelusovellus
+#Keskustelusovellus
 Sovelluksessa on (tai ainakin tulee olemaan) kaikki ominaisuudet mitä foorumilta tai keskustelupalstalta olettaa. Käyttäjät voivat aloittaa keskusteluketjuja ja lisätä viestejä niihin käyttäjien ylläpitämillä keskustelualueilla.
 ### Sovelluksen ominaisuudet (nämä siis ainakin tulevat olemaan)
 - Käyttäjä näkee alkusivulla keskustelualueet ja niiden keskusteluketjujen ja viestien määrät 

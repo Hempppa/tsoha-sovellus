@@ -1,0 +1,30 @@
+<title><b>Generaali foorumi nro 428</b></title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<span>/area{{area.id}}</span>
+<br>
+<b><a href="/">Takaisin</a></b>
+<h1>{{area.names}}:</h1>
+{% if session.username %}
+    <div width="200px" height="100px">Terve <a href="/personal">{{session.username}}</a>!</div><br>
+    <p><a href="/logout">Kirjaudu ulos</a></p>
+{% else %}
+    <p><a href="/account">Kirjaudu</a></p>
+{% endif %}   
+<br>
+{% if session.username %}
+    <a href="/area/{{area.id}}/newdiscussion">Aloita uusi keskustelu</a>
+{% endif %}
+<ul>
+{%for discussion in area_discussions%}
+<section>
+<p style="border:2px solid aquamarine;" width="100" margin="20px">
+<br>
+<b>{{discussion.names}}</b><br>
+<br>
+<button onclick="document.location='/area/{{area.id}}/discussion/{{discussion.id}}'">Keskusteluun</button>
+<br>
+</p></section>
+{%endfor%}
+</ul>

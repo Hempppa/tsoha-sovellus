@@ -1,0 +1,10 @@
+<h1>Uusi Keskustelu</h1>
+<a href="/area/{{area}}">Takaisin</a>
+<form action="/area/{{area}}/creatediscussion" method="POST">
+    <label for="name">Otsikko:</label><br>
+    <input type="text" id="name" name="title" value=""><br>
+    <label for="body">Ensimmäinen viesti:</label><br>
+    <input type="text" id="body" name="body" value="" width="200px" height="200px"><br><br>
+    <input type="submit" value="Julkaise">
+    <br>
+  </form>

@@ -1,4 +1,4 @@
-<title><b>Generaali foorumi nro 428</b></title>
+<title>Generaali foorumi nro 428</title>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -7,19 +7,25 @@
 <b><a href="/">Takaisin</a></b>
 <h1>{{area.names}}:</h1>
 {% if session.username %}
-    <div width="200px" height="100px">Terve <a href="/personal">{{session.username}}</a>!</div><br>
+    <div>Terve {{session.username}}!</div>
+    <div><a href="/personal">Käyttäjä</a></div>
     <p><a href="/logout">Kirjaudu ulos</a></p>
 {% else %}
     <p><a href="/account">Kirjaudu</a></p>
 {% endif %}   
-<br>
+<h3>Hakutyökalu:</h3>palauttaa keskustelut jotka sisältää hakusanan
+<form action="/area/{{area.id}}/search" method="GET">
+    <input type="text" name="query">
+    <input type="submit" value="Hae">
+</form>
+<b><hr></b>
 {% if session.username %}
     <a href="/area/{{area.id}}/newdiscussion">Aloita uusi keskustelu</a>
 {% endif %}
 <ul>
 {%for discussion in area_discussions%}
 <section>
-<p style="border:2px solid aquamarine;" width="100" margin="20px">
+<p style="border:2px solid gray;" width="100" margin="20px">
 <br>
 <b>{{discussion.names}}</b><br>
 <br>

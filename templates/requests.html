@@ -1,4 +1,4 @@
-<title><b>Generaali foorumi nro 428</b></title>
+<title>Generaali foorumi nro 428</title>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -6,6 +6,6 @@
 <h1>Käyttäjä: {{session.username}}</h1>
 <h2>Ystäväpyynnöt:</h2>
 <br>
-{%for user in requests%}
-    <br>{{user.names}} <button onclick="">Hyväksy</button><button onclick="">Hylkää</button><br>
+{%for user in requested%}
+    <div style="border:color=black">{{user[0]}} <button>Hyväksy</button><button>Hylkää</button></div>
 {%endfor%}

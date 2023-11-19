@@ -1,4 +1,4 @@
-<title><b>Generaali foorumi nro 428</b></title>
+<title>Generaali foorumi nro 428</title>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -6,6 +6,9 @@
 <h1>Käyttäjä: {{session.username}}</h1>
 <br>
 <h2>Lisää kaveriksi käyttäjänimen mukaan</h2>
+{% if request %}
+  <h2 style="color:red">{{req_msg}}</h2>
+{% endif %}
 <form action="/friendlist/send/confirm" method="POST">
     <label for="name">Käyttäjänimi:</label><br>
     <input type="text" id="name" name="friend" value=""><br>
